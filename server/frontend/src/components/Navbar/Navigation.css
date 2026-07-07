@@ -1,0 +1,23 @@
+.navbar-brand{
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.nav-link{
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ffd54f !important;
+}
+
+.btn-light{
+    font-weight:600;
+    border-radius:25px;
+    padding:6px 18px;
+}
+
+.navbar{
+    margin-bottom:25px;
+}
