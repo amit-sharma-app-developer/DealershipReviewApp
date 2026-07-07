@@ -12,6 +12,8 @@ function DealerDetails() {
     useEffect(() => {
         fetchDealer();
         fetchReviews();
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const fetchDealer = async () => {
