@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const { getDB } = require("../database/connection");
+const analyzeSentiment = require("../utils/sentiment");
 
 /*
  * GET ALL DEALERS
@@ -79,6 +80,10 @@ router.post("/addReview", async (req, res) => {
         const db = getDB();
 
         const review = req.body;
+
+        review.sentiment = analyzeSentiment(
+            review.review
+        );
 
         const result = await db
             .collection("reviews")
